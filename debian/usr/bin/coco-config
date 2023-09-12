@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$EUID" -eq 0 ]; then
+    echo "WARNING: You are running this script with elevated privileges."
+    echo "This could break something. For example: file location, file permission."
+    read -p "Do you want to continue? (y/n): " choice
+    if [ "$choice" != "y" ]; then
+        echo "Exiting."
+        exit 1
+    fi
+fi
+
+echo "Launching GUI to set the path..."
+python3 /usr/share/coco/coco_gui.py

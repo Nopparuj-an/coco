@@ -1,0 +1,16 @@
+Source: coco
+Section: unknown
+Priority: optional
+Maintainer: Nopparuj <nopparuj.an@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/coco
+#Vcs-Git: https://salsa.debian.org/debian/coco.git
+Rules-Requires-Root: no
+
+Package: coco
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A tool for building ROS2 workspaces with GUI path setup.
+coco, cd, build, source. All in one command! By Nopparuj A.

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ "$EUID" -eq 0 ]; then
+    echo "WARNING: You are running this script with elevated privileges."
+    echo "This could break something. For example: file location, file permission."
+    read -p "Do you want to continue? (y/n): " choice
+    if [ "$choice" != "y" ]; then
+        echo "Exiting."
+        exit 1
+    fi
+fi
+
+path_file="$HOME/.ros/coco_path.txt"
+
+if [ -f "$path_file" ]; then
+    path=$(cat "$path_file")
+fi
+
+if [ -z "$path" ]; then
+    echo "Path not set. Launching GUI to set the path..."
+    python3 /usr/share/coco/coco_gui.py  # Launch the GUI script
+    path=$(cat "$path_file")
+fi
+
+if [ -z "$path" ]; then
+    echo "Path not set. Exiting."
+    exit 1
+fi
+
+original_directory=$(pwd)
+cd "$path" || exit 1
+colcon build
+source install/setup.bash
+cd "$original_directory"
+

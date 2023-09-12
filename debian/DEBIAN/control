@@ -1,0 +1,7 @@
+Package: coco-tool
+Version: 1.0
+Architecture: all
+Maintainer: Nopparuj <nopparuj.an@gmail.com>
+Description: A tool for building ROS2 workspaces with GUI path setup.
+	coco, cd, build, source. All in one command! By Nopparuj A.
+Depends: python3-tk
