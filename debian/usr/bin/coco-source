@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ "$EUID" -eq 0 ]; then
+    exit 1
+fi
+
+path_file="$HOME/.ros/coco_path.txt"
+
+if [ -f "$path_file" ]; then
+    path=$(cat "$path_file")
+    source $path/install/setup.bash
+fi
+

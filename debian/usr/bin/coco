@@ -28,6 +28,7 @@ if [ -z "$path" ]; then
 fi
 
 original_directory=$(pwd)
+echo "coco building on $path"
 cd "$path" || exit 1
 colcon build
 source install/setup.bash
