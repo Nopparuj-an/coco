@@ -3,7 +3,7 @@ cd, build, source. All in one command!
 Now with GUI folder selection.
 
 <p align="center">
-  <img src="https://github.com/Nopparuj-an/coco/blob/main/images/GUI.png?raw=true">
+  <img src="https://github.com/Nopparuj-an/coco/blob/main/images/demo.gif?raw=true">
 </p>
 
 <br>
@@ -21,6 +21,11 @@ Or right-click the `coco-tool.deb` file, select `Open With Other Application` an
 ```bash
 coco
 ```
+
+<p align="center">
+  <img src="https://github.com/Nopparuj-an/coco/blob/main/images/GUI.png?raw=true">
+</p>
+
 The first time you run this command, coco will ask you to set you workspace path, simply select the folder and hit save.
 
 <br>
@@ -28,6 +33,13 @@ The first time you run this command, coco will ask you to set you workspace path
 #### Modify workspace path location
 ```bash
 coco-config
+```
+
+<br>
+
+## Uninstallation
+```bash
+sudo apt remove coco-tool
 ```
 
 <br>
