@@ -9,10 +9,19 @@ Now with GUI folder selection.
 <br>
 
 ## Installation
+1. Download the file from the release tab.
+2. Run installer by right-click the `coco-tool.deb` file, select `Open With Other Application` and `Software Install`, click `Install` and enter your password.
+
+If you prefer to install via terminal, run
 ```bash
 sudo dpkg -i coco-tool.deb
 ```
-Or right-click the `coco-tool.deb` file, select `Open With Other Application` and `Software Install`, click `Install` and enter your password.
+3. Add `source coco-source` to your .bashrc file
+
+Or run this command to add it automatically
+```bash
+echo "source coco-source" >> ~/.bashrc
+```
 
 <br>
 
